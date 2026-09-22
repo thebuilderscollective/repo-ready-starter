@@ -93,7 +93,6 @@ results. The two example PRDs show an initial waitlist and a later email feature
 - `AGENTS.md`: shared working rules for coding agents.
 - `CLAUDE.md`: Claude Code entry point importing the shared rules.
 - [Product brief](docs/product.md): user, problem, scope, success.
-- [Optional handoff](docs/handoff.md): unresolved work that Git does not capture.
 - [Decision example](docs/decisions/001-shared-agent-rules.md): why we chose something.
 
 The root README is the document map. The docs/ and prds/ folders do not need their own README files.
@@ -104,9 +103,18 @@ Keep credentials out of these files. `.env.example` lists variable names with em
 
 Open the same project folder (or a checkout containing your latest saved files) and say:
 
-> Read README.md, AGENTS.md, and docs/product.md. Inspect recent Git commits and the current diff. Read docs/handoff.md if present. Summarize the current state and proposed next step before making changes.
+> Work on docs/prds/002-email-confirmation.md. Follow the project instructions and show me your plan before editing.
 
-Use meaningful commits and pull requests to record completed changes and their reasons. Git cannot preserve uncommitted work or a decision left only in chat. Keep a short handoff only for unresolved work, then remove notes as they stop being useful.
+AGENTS.md routes the next session through recent commits and the current working
+tree, then the requested PRD and relevant project files. For application changes,
+app/AGENTS.md supplies local rules; README.md names check commands and
+CONTRIBUTING.md explains the review process. Keep files focused and add behaviour
+tests in tests/ as the application grows.
+
+Use meaningful commits and pull requests to record completed changes, their
+reasons, and verification results. Put open questions in the relevant PRD,
+issue, or pull request. A fresh checkout cannot see your uncommitted files or
+recover decisions left only in chat.
 
 ## About this starter
 
