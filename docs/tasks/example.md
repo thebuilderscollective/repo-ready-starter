@@ -1,6 +1,7 @@
 # Example task: collect interest
 
 Status: example only; replace before implementation.
+Feature plan: [PRD 001](../prds/001-waitlist.md).
 
 ## Outcome
 A visitor can leave an email address and see a confirmation.

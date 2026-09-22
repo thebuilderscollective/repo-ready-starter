@@ -1,14 +1,14 @@
 # Your project, ready for the next conversation
 
-A small documentation starter from The Builder Course. No framework or application dependencies. Start with the essentials; keep the optional examples when they help. Use it for an app, a prototype, or an agent workflow.
+A small documentation starter from The Builder Course. No framework or application dependencies. Start with the essentials; keep the optional files when they help. Use it for an app, a prototype, or an agent workflow.
 
 ## Make it yours in 10 minutes
 
 1. On GitHub, choose **Use this template → Create a new repository**. Or download the ZIP and copy the files into your project folder.
-2. Replace the bracketed prompts in this README and `docs/product.md` with real answers. Delete what you do not need.
+2. Replace the bracketed prompts in this README and `docs/product.md` with real answers. Delete files you do not need and repair links to them.
 3. Fill in verified setup and check commands below. There is no runnable application in this template yet.
 4. Review `AGENTS.md`. `CLAUDE.md` imports it, so shared rules have one home.
-5. Open your coding agent in this folder. Ask it to read `AGENTS.md`, `docs/README.md`, and `docs/handoff.md`, then summarize the next step.
+5. Open your coding agent in this folder. Ask it to read `README.md`, `AGENTS.md`, `docs/product.md`, and `docs/handoff.md`, then summarize the next step.
 
 ## What we are building
 
@@ -31,6 +31,8 @@ Keep CLAUDE.md if you use Claude Code. The rest demonstrates how to grow:
 
 - [CONTRIBUTING.md](CONTRIBUTING.md): how teammates propose and verify changes.
 - [DESIGN.md](DESIGN.md): visual and interaction conventions.
+- [Feature PRDs](docs/prds/README.md): one plan per substantial feature or change.
+- [Evaluations](docs/evals.md): scenarios, expected behaviour, and results.
 - [Architecture](docs/architecture.md): components, data flow, and boundaries.
 - [CHANGELOG.md](CHANGELOG.md): changes people using the product care about.
 - [Release runbook](docs/runbooks/release.md): prerequisites, steps, checks, recovery.
@@ -39,15 +41,16 @@ Delete optional examples you do not need. A folder structure is not homework.
 
 ## Try the instruction hierarchy
 
-There are three real levels: `AGENTS.md` -> `docs/AGENTS.md` ->
-`docs/runbooks/AGENTS.md`. The root sets shared agreements; docs adds link and
-accuracy checks; runbooks adds prerequisites, verification, and recovery.
+There are three real levels: `AGENTS.md` -> `app/AGENTS.md` ->
+`app/billing/AGENTS.md`. The root sets shared agreements; app adds interface and
+flow checks; billing adds money-specific validation and failure cases. The app/
+folder is an instructional example, not a runnable application.
 
-For Codex, start in `docs/runbooks/` and ask which instruction files loaded.
+For Codex, start in `app/billing/` and ask which instruction files loaded.
 Its startup discovery walks from the repo root to the working directory.
 From the root, explicitly ask it to read the nested files for that task.
 
-Each level also has a CLAUDE.md importing its neighbouring AGENTS.md.
+Each level has a CLAUDE.md containing just `@AGENTS.md`, importing the neighbouring AGENTS.md.
 Claude Code loads ancestor guidance at startup and nested guidance as it reads
 files in those folders. Keep these additive rules consistent; do not rely on
 conflicting instructions being resolved the same way across tools.
@@ -65,11 +68,21 @@ Claude Code documents `.claude/skills/` for project skills; move or link this sk
 there if needed, and verify discovery in your tool. The CLAUDE.md import shares
 instructions, not skill installation.
 
+## Keeping the docs current
+
+Keep the files you actually need. No one gets extra points for empty files.
+Each extra file adds maintenance: give it an owner, review it when the related
+behaviour changes, and remove or archive it when it stops helping.
+
+Keep one living docs/product.md for the whole product. Write feature-specific
+PRDs under docs/prds/ as the product evolves. Use a separate PRD for a substantial change; a small fix can stay in a task. docs/evals.md records how you assess the
+results. The two example PRDs show an initial waitlist and a later email feature.
+
 ## Find your bearings
 
 - `AGENTS.md`: shared working rules for coding agents.
 - `CLAUDE.md`: Claude Code entry point importing the shared rules.
-- [Docs index](docs/README.md): what to read for each kind of task.
+- [Docs index](docs/README.md): an optional map of docs/, separate from this root README.
 - [Product brief](docs/product.md): user, problem, scope, success.
 - [Current handoff](docs/handoff.md): where the work stands and what comes next.
 - [Decisions](docs/decisions/README.md): why we chose something.
@@ -81,7 +94,7 @@ Keep credentials out of these files. `.env.example` lists variable names with em
 
 Open the same project folder (or a checkout containing your latest saved files) and say:
 
-> Read AGENTS.md, docs/README.md, and docs/handoff.md. Summarize the current state and proposed next step. Check the actual files before making changes.
+> Read README.md, AGENTS.md, docs/product.md, and docs/handoff.md. Summarize the current state and proposed next step. Check the actual files before making changes.
 
 Before leaving a session, update the handoff. A new chat can read a file; it cannot reconstruct an unsaved decision.
 

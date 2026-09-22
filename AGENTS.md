@@ -7,8 +7,9 @@
 - Use docs/product.md for the user, scope, and definition of success.
 - For interface work, read DESIGN.md; for system changes, read docs/architecture.md.
 - For contributions, read CONTRIBUTING.md.
-- For documentation work, read docs/AGENTS.md; for runbooks, also read
-  docs/runbooks/AGENTS.md. These paths are relative to the repository root.
+- For feature work, read the relevant plan in docs/prds/ and checks in docs/evals.md.
+- For application work, read app/AGENTS.md; for billing, also read
+  app/billing/AGENTS.md. These paths are relative to the repository root.
 
 ## While working
 - Make the smallest change that satisfies the agreed task.
