@@ -2,8 +2,8 @@
 
 ## Start here
 - Read README.md for setup and verified check commands.
-- Read docs/README.md to find task-specific context.
-- Read docs/handoff.md; verify its claims against the current files.
+- Inspect recent Git commits and the current diff for context.
+- Read docs/handoff.md if present for unresolved work; verify it against the files.
 - Use docs/product.md for the user, scope, and definition of success.
 - For interface work, read DESIGN.md; for system changes, read docs/architecture.md.
 - For contributions, read CONTRIBUTING.md.
@@ -22,7 +22,8 @@
 ## Before handing over
 - Run the relevant checks documented in README.md. Never claim an unrun check passed.
 - If no automated checks exist, describe the manual verification and its limits.
-- Update docs/handoff.md with changes, evidence, open issues, and the next step.
+- Keep useful reasons in commit messages and pull requests.
+- Use docs/handoff.md only for unfinished work or context not captured in Git.
 - Record a consequential decision in docs/decisions/ with its reason.
 - Update a rule only when the working agreement actually changes.
 

@@ -4,8 +4,8 @@ For a teammate (human or AI) making their first change.
 
 ## Pick a small outcome
 Describe the problem, the proposed change, and how a reviewer can check it.
-For larger changes, agree scope before implementing. The task example in
-[docs/tasks/example.md](docs/tasks/example.md) shows a useful shape.
+For larger changes, agree scope before implementing. The feature plan in
+[docs/prds/001-waitlist.md](docs/prds/001-waitlist.md) shows a useful shape.
 
 ## Make the change
 Follow the branch and pull-request workflow in [AGENTS.md](AGENTS.md).

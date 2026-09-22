@@ -1,0 +1,16 @@
+# GitLab CI example, disabled until the TODO tests have real assertions.
+# GitHub uses .github/workflows/ci.yml with GitHub Actions syntax.
+# Renaming a GitLab file does not convert it to a GitHub workflow.
+workflow:
+  rules:
+    - when: never
+
+stages:
+  - test
+
+# Choose the runtime, check command and trigger rules for your project.
+app-tests:
+  image: node:lts
+  stage: test
+  script:
+    - node --test tests/*.test.mjs
