@@ -1,6 +1,6 @@
 # Your project, ready for the next conversation
 
-A small documentation starter from The Builder Course. No framework, no dependencies, no ceremonial folders. Use it for an app, a prototype, or an agent workflow.
+A small documentation starter from The Builder Course. No framework or application dependencies. Start with the essentials; keep the optional examples when they help. Use it for an app, a prototype, or an agent workflow.
 
 ## Make it yours in 10 minutes
 
@@ -23,6 +23,47 @@ A small documentation starter from The Builder Course. No framework, no dependen
 - Expected result: [what success looks like]
 
 Do not invent commands. Replace these prompts when you add the application.
+
+## Choose what you need
+
+Start with README.md, AGENTS.md, docs/product.md, and docs/handoff.md.
+Keep CLAUDE.md if you use Claude Code. The rest demonstrates how to grow:
+
+- [CONTRIBUTING.md](CONTRIBUTING.md): how teammates propose and verify changes.
+- [DESIGN.md](DESIGN.md): visual and interaction conventions.
+- [Architecture](docs/architecture.md): components, data flow, and boundaries.
+- [CHANGELOG.md](CHANGELOG.md): changes people using the product care about.
+- [Release runbook](docs/runbooks/release.md): prerequisites, steps, checks, recovery.
+
+Delete optional examples you do not need. A folder structure is not homework.
+
+## Try the instruction hierarchy
+
+There are three real levels: `AGENTS.md` -> `docs/AGENTS.md` ->
+`docs/runbooks/AGENTS.md`. The root sets shared agreements; docs adds link and
+accuracy checks; runbooks adds prerequisites, verification, and recovery.
+
+For Codex, start in `docs/runbooks/` and ask which instruction files loaded.
+Its startup discovery walks from the repo root to the working directory.
+From the root, explicitly ask it to read the nested files for that task.
+
+Each level also has a CLAUDE.md importing its neighbouring AGENTS.md.
+Claude Code loads ancestor guidance at startup and nested guidance as it reads
+files in those folders. Keep these additive rules consistent; do not rely on
+conflicting instructions being resolved the same way across tools.
+
+## What is .agents/ doing here?
+
+`.agents/skills/write-handoff/SKILL.md` is a small optional Codex skill: a reusable
+recipe for updating the handoff. Try `$write-handoff` in a Codex session where
+this repository's skills are available. Its name and description help discovery;
+the full recipe loads when selected. The leading dot is a hidden-folder convention.
+
+AGENTS.md holds working rules; `.agents/skills/` packages reusable workflows.
+Putting arbitrary Markdown in `.agents/` does not make it load automatically.
+Claude Code documents `.claude/skills/` for project skills; move or link this skill
+there if needed, and verify discovery in your tool. The CLAUDE.md import shares
+instructions, not skill installation.
 
 ## Find your bearings
 
@@ -49,3 +90,5 @@ Before leaving a session, update the handoff. A new chat can read a file; it can
 By Rajat, for [The Builder Course](https://www.thebuildercourse.com). Adapt the structure as the project grows. Names will change; keeping intent, rules, decisions, and current state findable is the principle.
 
 Instruction behavior checked 22 September 2026: [Codex](https://learn.chatgpt.com/docs/agent-configuration/agents-md) · [Claude Code](https://code.claude.com/docs/en/memory).
+
+Skills references: [Codex](https://learn.chatgpt.com/docs/build-skills) · [Claude Code](https://code.claude.com/docs/en/skills).

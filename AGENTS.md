@@ -5,6 +5,10 @@
 - Read docs/README.md to find task-specific context.
 - Read docs/handoff.md; verify its claims against the current files.
 - Use docs/product.md for the user, scope, and definition of success.
+- For interface work, read DESIGN.md; for system changes, read docs/architecture.md.
+- For contributions, read CONTRIBUTING.md.
+- For documentation work, read docs/AGENTS.md; for runbooks, also read
+  docs/runbooks/AGENTS.md. These paths are relative to the repository root.
 
 ## While working
 - Make the smallest change that satisfies the agreed task.
