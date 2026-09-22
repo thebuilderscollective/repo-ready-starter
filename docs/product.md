@@ -16,7 +16,8 @@ Last reviewed: [date]
 
 ## Feature plans
 Keep one living product brief. Add a PRD for each substantial feature or change:
-- [PRD index](prds/README.md): status and links to individual plans.
+- [Waitlist](prds/001-waitlist.md): example / proposed.
+- [Email confirmation](prds/002-email-confirmation.md): example / proposed.
 - Update this brief when a shipped feature changes the product's scope.
 - Keep old PRDs as records; mark superseded plans and link to their replacements.
 

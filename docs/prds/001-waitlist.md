@@ -23,6 +23,6 @@ Accounts, payments, and confirmation emails are out of scope for this first step
 Choose storage, consent wording, and retention before connecting a real service.
 
 ## Delivery and evaluation
-[Example implementation task](../tasks/example.md).
+Add executable acceptance checks under tests/ when the application exists.
 Use [evals.md](../evals.md) for the evaluation format and record relevant cases.
 A later feature can add [email confirmation](002-email-confirmation.md).

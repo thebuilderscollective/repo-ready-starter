@@ -1,28 +1,21 @@
-# Current handoff
+# Unfinished work (optional)
 
 Updated: [date]
 Owner: [name]
 Branch / commit: [where this work exists]
 
-## Goal
-[The outcome we are working toward]
+Read recent Git commits and the current diff for changes already recorded.
+Keep this note only when there is context the next session cannot recover there.
+The starter has no application implemented yet.
 
-## Current state
-Documentation starter only. No application has been implemented.
+## Still unresolved
+[An open question, blocker, or unfinished change]
 
-## Changed
-[Files changed and the behavior they now support]
-
-## Verified
-[Exact check, result, and date. Say "not run" when it was not run.]
-
-## Open issues
-[Known failures, uncertain assumptions, or blockers]
+## Still unchecked
+[Checks not run, or a failure with evidence. Do not imply these passed.]
 
 ## Next step
-[One concrete action, plus the file or task to start with]
+[One concrete action and where to start]
 
-## Relevant decisions
-[Links to decision records; do not duplicate them here]
-
-Keep this a current snapshot. Git history preserves older versions.
+Remove resolved notes. Keep useful decisions with the relevant PRD or decision
+record; do not turn this file into a second commit log.
