@@ -3,6 +3,8 @@
 Scope: app/ and its subfolders. Add these to the repository-wide guidance.
 This folder demonstrates instruction scope; it contains no application code yet.
 
+- Keep modules focused on one responsibility; reuse existing boundaries.
+- Add or update behaviour tests under tests/ and use README.md for verified check commands.
 - Read DESIGN.md before interface changes; reuse existing components.
 - Read docs/architecture.md before changing how application parts connect.
 - Check loading, error, empty, and success states for changed user flows.
